@@ -1,0 +1,179 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+/* Bandeau de navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #D32F2F; /* Rouge vif */
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1 100%; /* Le logo occupe toute la largeur sur les petits écrans */
+    text-align: center;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Permet au menu de se réorganiser */
+    justify-content: center;
+    width: 100%;
+}
+
+nav .menu li {
+    display: inline;
+}
+
+nav .menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .menu li a:hover {
+    background-color: #B71C1C; /* Un rouge plus intense */
+}
+
+/* L'élément actif du menu (sélectionné) devient noir */
+nav .menu li a.active {
+    background-color: #000; /* Noir pour l'élément sélectionné */
+    color: #fff; /* Texte blanc pour contraste */
+}
+
+/* Marge au-dessus du contenu principal pour compenser la hauteur du header */
+main {
+    margin-top: 100px; /* Ajuster en fonction de la hauteur du bandeau */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sections principales */
+section {
+    padding: 20px 0;
+}
+
+h1 {
+	color: #D32F2F
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Styles pour les images */
+img {
+    max-width: 100%; /* Limite la largeur maximale à 100% de leur conteneur */
+    height: auto; /* Garde les proportions des images */
+    display: block; /* Évite les espaces sous les images */
+    margin: 0 auto; /* Centre les images horizontalement */
+}
+
+/* Médias Queries pour écrans plus petits */
+
+/* Écran de petite taille (tablettes ou plus petits) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav .menu {
+        gap: 10px;
+    }
+
+    nav .menu li a {
+        padding: 8px 16px;
+    }
+
+    main {
+        margin-top: 120px; /* Ajustement pour plus d'espace sous le bandeau */
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+	
+	img {
+        max-width: 90%; /* Les images peuvent être légèrement plus petites sur les tablettes */
+    }
+}
+
+/* Écran encore plus petit (mobiles) */
+@media (max-width: 480px) {
+    header {
+        padding: 8px;
+    }
+
+    nav .logo {
+        font-size: 1.2rem;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .menu li a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    main {
+        margin-top: 140px; /* Plus d'espace pour le bandeau sur mobiles */
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+	
+	img {
+        max-width: 100%; /* Les images occuperont toute la largeur de l'écran sur mobile */
+    }
+}
+
+
