@@ -83,6 +83,10 @@ section {
     padding: 20px 0;
 }
 
+h1 {
+	color: #D32F2F
+}
+
 h2 {
     font-size: 1.5rem;
     color: orange;
@@ -94,13 +98,12 @@ p {
     margin-bottom: 20px;
 }
 
-/* Pied de page */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #222;
-    color: #fff;
-    font-size: 0.9rem;
+/* Styles pour les images */
+img {
+    max-width: 100%; /* Limite la largeur maximale à 100% de leur conteneur */
+    height: auto; /* Garde les proportions des images */
+    display: block; /* Évite les espaces sous les images */
+    margin: 0 auto; /* Centre les images horizontalement */
 }
 
 /* Médias Queries pour écrans plus petits */
@@ -129,6 +132,10 @@ footer {
 
     p {
         font-size: 0.9rem;
+    }
+	
+	img {
+        max-width: 90%; /* Les images peuvent être légèrement plus petites sur les tablettes */
     }
 }
 
@@ -162,6 +169,10 @@ footer {
 
     p {
         font-size: 0.8rem;
+    }
+	
+	img {
+        max-width: 100%; /* Les images occuperont toute la largeur de l'écran sur mobile */
     }
 }
 
